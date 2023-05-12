@@ -9,7 +9,7 @@ const ProductPage = () => {
     const listItems = product.map((item)=>
     <div className="card" key={item.id}>
         <div className="card-img">
-            <img scr={item.image} alt="Can't Display"/>
+            <img src={item.image} alt="Can't Display"/>
         </div>
         <div className="card-header">
             <h2>{item.name}</h2>
