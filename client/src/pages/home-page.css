@@ -1,0 +1,79 @@
+
+.home-image{
+    display: block;
+    width: 100%;
+    position: absolute;
+    top: -50px;
+    bottom: -40px;
+}
+.image-container {
+    overflow: hidden;
+    height: 989px;
+    max-height: 1000px;
+    position: relative;
+}
+.home-quote {
+    margin: 80px auto;
+    font-size: 20px;
+}
+.text-on-image {
+    position: absolute;
+    color: white;
+    font-weight: bold;
+    /* margin: 40px auto; */
+    top:80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: x-large;
+  }
+  .quiz-box{
+    background-color: white;
+    padding: 40px;
+    margin-bottom: 40px;
+  }
+  .quiz-box h2{
+    padding: 20px;
+    font-size: 30px;
+  }
+
+  .influencer-box{
+    background-color: white;
+    padding: 40px;
+    height: 375px;
+    width: 908.5px;
+    float: left;
+  }
+  .influencer-box h2{
+    padding: 30px;
+    font-size: 30px;
+    text-align: left;
+  }
+  .influencer-buttons{
+  display: flex !important;
+  justify-content: left !important;
+  margin-left: 20px;
+  }
+  .influencer-buttons .youtube-button{
+    margin-right: 60px;
+  }
+
+  .influencer-img-box{
+    overflow: hidden;
+    height: 375px;
+    width: 500px;
+    float: right;
+    
+  }
+  .influencer-img{
+    width: 100%;
+    height: 100%;
+  }
+  
+.search-bar{
+  background-color: white;
+  width: 50%;
+  z-index: 1;
+  position: absolute;
+  top: 90%;
+  left: 25%;
+}
