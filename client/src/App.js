@@ -9,8 +9,6 @@ import ProductPage from "./pages/product-page";
 import ProductDetailsPage from "./pages/product-details-page";
 import HomePage from "./pages/home-page";
 
-import DetiailsPage from "./pages/details-page";
-
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import "./App.css";
 
@@ -39,8 +37,7 @@ function App() {
        <Route path="/create" element={<Create />} /> */}
        <Route exact path="/" element={<HomePage />} />
        <Route path="/products" element={<ProductPage />} />
-       <Route path="/productdetails" element={<ProductDetailsPage />} />
-       <Route path="/DetiailsPage" element={<DetiailsPage />} />
+       <Route path="/product-details" element={<ProductDetailsPage />} />
      </Routes>
       
    </div>

@@ -17,3 +17,14 @@ app.listen(port, () => {
   });
   console.log(`Server is running on port: ${port}`);
 });
+app.get('/api/products', (req, res) => {
+  console.log('api/products called!')
+  const products = [{
+    id: "1", 
+    category: "Shampoo", 
+    price: "$30", 
+    name: "OLAPLEX Nº.4 BOND MAINTENANCE SHAMPOO", 
+    image: "https://cdn.shopify.com/s/files/1/0434/1661/products/782-AllureSealAddition_4_5__No4250ml_2000x2000_Transparent_Right_1440x.png?v=1666712424"
+  }]
+  res.json(products);
+});

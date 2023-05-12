@@ -1,6 +1,6 @@
 import { Component } from "react";
 import "./product-details-page.css";
-import GoogleSearchBar from "../components/SearchBar/google-search-bar";
+import GoogleSearchBar from "../components/search-bar/google-search-bar";
 
 
 class ProductDetailsPage extends Component{

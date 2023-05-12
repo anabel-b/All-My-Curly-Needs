@@ -3,7 +3,7 @@ import curlyhairhome from "../assets/Images/CurlyHairHome.jpg";
 import influencer from "../assets/Images/influencer.jpg";
 import "./home-page.css";
 import { Button} from "@mui/material";
-import SearchBar from "../components/SearchBar/search-bar";
+import SearchBar from "../components/search-bar/search-bar";
 
 
 function HomePage() {
