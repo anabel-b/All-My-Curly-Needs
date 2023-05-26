@@ -11,13 +11,14 @@ import Button from '@mui/material/Button';
 // import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
-//import TransparentLogo from '../assets/Images/TransparentLogo.png';
+import { useNavigate } from 'react-router-dom';
 
-const pages = ['Shampoo', 'Conditioner', 'Hair Mask','Styling Creams','Accessories','Products','about us'];
+const pages = ['Shampoo', 'Conditioner', 'Hair Mask','Styling Creams','Accessories','Products','About Us'];
 
 function ResponsiveAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
+  const navigate = useNavigate();
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -29,6 +30,19 @@ function ResponsiveAppBar() {
 
   const handleCloseUserMenu = () => {
     setAnchorElUser(null);
+  };
+
+  const handlePageClick = (page) => {
+    if (page === 'Products') {
+      navigate('/products');
+      console.log("Products button clicked");
+    }
+    if (page === 'About Us') {
+      navigate('/about-us');
+      console.log("About Us button clicked");
+    }
+    
+    handleCloseNavMenu();
   };
 
   return (
@@ -84,7 +98,7 @@ function ResponsiveAppBar() {
               }}
             >
               {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
+                <MenuItem key={page} onClick={() => handlePageClick(page)}>
                   <Typography textAlign="center">{page}</Typography>
                 </MenuItem>
               ))}
@@ -113,12 +127,13 @@ function ResponsiveAppBar() {
             {pages.map((page) => (
               <Button
                 key={page}
-                onClick={handleCloseNavMenu}
+                onClick={() => handlePageClick(page)}
                 sx={{ my: 2, color: 'white', display: 'block' }}
               >
                 {page}
               </Button>
             ))}
+
           </Box>
 
           <Box sx={{ flexGrow: 0 }}>

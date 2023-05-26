@@ -5,14 +5,13 @@ import { Route, Routes } from "react-router-dom";
 // We import all the components we need in our app
 import ResponsiveAppBar from "./components/responsive-app-bar";
 import './App.css';
-import ProductPage from "./pages/product-page";
-import ProductDetailsPage from "./pages/product-details-page";
-import HomePage from "./pages/home-page";
-
-import DetiailsPage from "./pages/details-page";
+import ProductPage from "./pages/product-page/product-page";
+import ProductDetailsPage from "./pages/product-details/product-details-page";
+import HomePage from "./pages/home/home-page";
 
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import "./App.css";
+import AboutPage from "./pages/about-us/about-us-page";
 
 
 const theme = createTheme({
@@ -38,9 +37,9 @@ function App() {
        <Route path="/edit/:id" element={<Edit />} />
        <Route path="/create" element={<Create />} /> */}
        <Route exact path="/" element={<HomePage />} />
-       <Route path="/products" element={<ProductPage />} />
-       <Route path="/productdetails" element={<ProductDetailsPage />} />
-       <Route path="/DetiailsPage" element={<DetiailsPage />} />
+       <Route exact path="/products" element={<ProductPage />} />
+       <Route path="/product-details/:productId" element={<ProductDetailsPage />} />
+       <Route path= "/about-us" element={<AboutPage/>} />
      </Routes>
       
    </div>
