@@ -1,11 +1,12 @@
-// import { ListItem } from "@mui/material";
 import React, { useState, useEffect} from "react";
 import "./product-page.css";
-// import product from "../../components/product-data";
+import { useNavigate } from "react-router"; //hook
+
 
 
 const ProductPage = () => {
     const [products, setProducts] = useState([]);
+    const navigateToProductDetails = useNavigate();
 
      const fetchProductData = () => {
         fetch("api/products")
@@ -20,8 +21,13 @@ const ProductPage = () => {
      useEffect(() => {
         fetchProductData();
     }, []);
+
+    const handleProductClick = (productId) =>{
+        navigateToProductDetails(`/product-details/${productId}`);
+    }
+
     const listItems = products.map((item)=>
-    <div className="product-container">
+    <div className="product-container" key={item.id} onClick={() => handleProductClick(item.id)}>
     <div className="card" key={item.id}>
         <div className="card-img">
             <img src={item.image?.[0]} alt="Can't Display"/>
@@ -30,7 +36,6 @@ const ProductPage = () => {
             <h2>{item.name}</h2>
             <p className="product-price">{item.price}</p>
         </div>
-
     </div>
     </div>
     );
@@ -40,6 +45,5 @@ const ProductPage = () => {
         <h3>All Products</h3>
         {listItems}
     </div>);
-
 } 
 export default ProductPage;

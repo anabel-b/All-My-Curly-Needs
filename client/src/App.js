@@ -40,6 +40,7 @@ function App() {
        <Route exact path="/products" element={<ProductPage />} />
        <Route path="/product-details/:productId" element={<ProductDetailsPage />} />
        <Route path= "/about-us" element={<AboutPage/>} />
+       
      </Routes>
       
    </div>
